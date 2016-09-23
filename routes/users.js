@@ -25,21 +25,21 @@ router.route('/me/cart')
   });
 
 router.route('/me')
-    .get(function (req,res) {
-      if(!req.user){
-        res.status(401).json({error: "User is not logged"});
-        return res;
+  .get(function (req,res) {
+    if(!req.user){
+      res.status(401).json({error: "User is not logged"});
+      return res;
+    }
+    req.user.populate({
+      path:"data.cart.product",
+      model: "Product"
+    },function (err,user) {
+        if(err)
+          res.status(500).json({error: "error searching products in cart"});
+        res.json(user);
       }
-      req.user.populate(
-        {path:"data.cart.product", model: "Product"},function (err,user) {
-          if(err){
-            res.status(500).json({error: "error searching products in cart"});
-          }
-          res.json(user);
-        }
-      );
-
-    });
+    );
+});
 
 
 module.exports = router;

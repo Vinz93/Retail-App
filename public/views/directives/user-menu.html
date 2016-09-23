@@ -14,7 +14,9 @@
                 <a href="/auth/facebook" class="page-scroll">
                     <i class="fa fa-facebook-official"></i>Log In Facebook</a>
             </li>
-            <li ng-show="user"><i class="fa fa-shopping-cart"></i></li>
+            <li ng-show="user">
+              <a href="#/checkout" class="shopping-cart"> <i class="fa fa-shopping-cart"></i></a>            
+            </li>
             <li ng-show="user" class="profile-pic">
                 <img ng-src="{{user.picture}}" alt="profile picture">
             </li>

@@ -1,1 +1,13 @@
-<p> checkout view</p>
+<div class="container checkout">
+  <div class="cart-product row" ng-repeat = " item in user.data.cart">
+    <div class="col-sm-3">
+      <img ng-src="{{ item.product.photos[0]}}" alt="">
+    </div>
+    <div class="col-sm-4">
+      <h4 class="product-name">{{ item.product.name }}</h4>
+    </div>
+    <div class="col-sm-2">
+      <p>{{item.product.displayPrice}}</p>
+    </div>
+  </div>
+</div>

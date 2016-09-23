@@ -62,6 +62,9 @@ img
 {
     font-size: 18px;
 }
+.user-menu-nav a.shopping-cart{
+  padding: 0;
+}
 .user-menu-nav .fa-shopping-cart
 {
     font-size: 30px;
@@ -296,6 +299,7 @@ img
     margin-right: 10px;
 }
 
+
 /*=== sort by price arrow ===*/
 .sort-products
 {
@@ -323,4 +327,18 @@ img
     font-size: 15px;
 
     right: 33px;
+}
+
+/*==========================================
+          CHECKOUT
+===========================================*/
+.cart-product{
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid #e2e0e0;
+}
+
+.checkout > .cart-product > img{
+  width: 100px;
 }

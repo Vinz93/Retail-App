@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "test": "mocha test.js",
+    "insert": "mocha initdb.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.0",
+    "mongoose": "4.1.12",
+    "mongoose-auto-increment": "^5.0.1",
+    "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1"
+  },
+  "devDependencies": {
+    "gulp": "3.8.11",
+    "gulp-mocha": "2.0.1",
+    "gulp-nodemon": "^2.1.0",
+    "mocha": "2.2.4",
+    "superagent": "^1.8.4"
+  }
+}

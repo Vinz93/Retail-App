@@ -1,0 +1,17 @@
+{
+  "name": "sharp angular",
+  "authors": [
+    "Vincenzo Bianco <vincenzo_bianco_93@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

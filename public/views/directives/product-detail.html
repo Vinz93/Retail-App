@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <!-- bread scrums -->
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="bread">
+        <li class="bread-item" ng-repeat="item in product.category.ancestors">
+          <span>/</span>
+          <a ng-href="#/category/{{item}}">{{item}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- product name -->
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1 class="product-name">{{product.name}}</h2>
+    </div>
+  </div>
+  <!-- Product images and gallery  -->
+  <div class="row product-img-container">
+    <div class="col-sm-6 col-sm-offset-2">
+      <div class="overlay">
+        <img ng-src="{{ product.photos[0]}}" alt="">
+      </div>
+    </div>
+    <div class="col-sm-3 col-sm-offset-1">
+      <ul class="product-gallery">
+        <li class="product-gallery-photo" ng-repeat="photo in product.photos">
+          <img ng-src="{{photo}}" alt="">
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Product price and add to cart  -->
+  <div class="row product-info">
+    <div class="col-sm-6 col-sm-offset-3">
+      <ul>
+        <li>
+          <!-- <p class="product-price">{{product.displayPrice}}</p> -->
+          <p class="product-price">{{product.displayPrice}}</p>
+        </li>
+        <li>
+          <!-- <span class="add-cart-button">add to cart</span> -->
+          <add-to-cart></add-to-cart>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

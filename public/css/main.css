@@ -1,0 +1,323 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+@import 'https://fonts.googleapis.com/css?family=Merriweather';
+body
+{
+    font-family: 'Montserrat', sans-serif;
+}
+img
+{
+    width: 100%;
+    height: auto;
+}
+
+/*========= nav bar user ========*/
+.navbar-retail
+{
+    height: 60px;
+
+    color: #fff;
+    border-bottom: 1px solid #aaa;
+    background-color: #d24646;
+}
+
+/* navbar height*/
+
+.navbar-retail > .container,
+.navbar-retail > .container > div,
+.navbar-retail > .container > ul,
+.navbar-retail > .container > ul > li,
+.navbar-retail > .container > ul > li > a
+{
+    height: 60px;
+}
+.navbar-retail > .container .navbar-brand,
+.navbar-nav > li > a
+{
+    color: #fff;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus
+{
+    background-color: transparent;
+    ;
+}
+.navbar-retail > .container > ul > li > a
+{
+    position: relative;
+}
+.navbar-retail .fa-facebook-official
+{
+    font-size: 24px;
+
+    position: absolute;
+    top: 13px;
+    left: -13px;
+}
+.user-menu-nav > .profile-pic > img
+{
+    margin-top: 4px;
+}
+.user-menu-nav > .user-name > a
+{
+    font-size: 18px;
+}
+.user-menu-nav .fa-shopping-cart
+{
+    font-size: 30px;
+
+    margin-top: 9px;
+    margin-right: 20px;
+
+    color: #fff;
+}
+
+/*==========================================
+        PRODUCT DETAIL
+===========================================*/
+
+/*==== bread scrums ====*/
+
+.bread
+{
+    margin-top: 10px;
+    margin-left: 16px;
+}
+
+.bread-item
+{
+    display: inline-block;
+
+    list-style: none;
+}
+
+.bread-item > span
+{
+    margin-right: 2px;
+    margin-left: 2px;
+
+    color: #d24646;
+}
+
+.bread-item > a
+{
+    text-decoration: none;
+
+    color: #000;
+}
+
+/*==== Product Name ====*/
+
+.product-name
+{
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+
+    text-align: center;
+
+    color: #582b99;
+}
+
+/*===== Product image and gallery ==== */
+
+.product-img-container
+{
+    margin-top: 50px;
+}
+
+.product-img-container .overlay
+{
+    width: 400px;
+    margin: 0 auto;
+}
+
+.product-gallery
+{
+    list-style: none;
+}
+
+.product-gallery-photo
+{
+    width: 100px;
+    margin-top: 20px;
+    padding: 6px;
+
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+
+    border: 1px solid #582b99;
+}
+
+.product-gallery-photo:hover
+{
+    border: 1px solid  #d24646;
+}
+
+/*===== Product informaton ==== */
+.product-info
+{
+    margin-top: 40px;
+}
+.product-info ul
+{
+    list-style: none;
+}
+
+.product-info ul > li
+{
+    display: inline-block;
+
+    margin-right: 40px;
+}
+
+.product-price
+{
+    font-family: 'Merriweather', serif;
+    font-size: 26px;
+    font-weight: 700;
+
+    color: #582b99;
+}
+
+.add-cart-button
+{
+    padding: 10px 20px;
+
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #fff;
+    border-radius: 3px;
+    background-color: #d24646;
+}
+
+
+/*==========================================
+          CATEGORIES
+===========================================*/
+
+/*====== categories bread crumbs ======*/
+.category-bread-crumb > .bread
+{
+    position: relative;
+}
+.category-bread-crumb > .bread span
+{
+    position: relative;
+
+    color: #d24646;
+}
+
+.category-bread-crumb > .bread > .bread-item a,
+.children-menu > li > a
+{
+    text-decoration: none;
+
+    color: #000;
+}
+
+.fa-chevron-down
+{
+    position: absolute;
+    top: 4px;
+    left: 146px;
+
+    cursor: pointer;
+}
+
+.children-menu
+{
+    position: relative;
+    top: -1px;
+    left: 70px;
+
+    list-style: none;
+}
+
+/* ===== category prodcut items ===*/
+
+.category-product-container
+{
+    margin-bottom: 30px;
+}
+
+.category-product-container > .product > img
+{
+    width: 230px;
+    height: 174px;
+}
+
+.category-product-container > .product > .category-product-name
+{
+    text-align: center;
+}
+.category-product-container > .product > .category-product-name > a
+{
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+
+    text-decoration: none;
+
+    color: #582b99;
+}
+/*products price and cart button*/
+.category-product-container  .price-cart-container
+{
+    text-align: center;
+}
+.category-product-container .price-cart-container .product-price
+{
+    font-size: 18px;
+
+    display: block;
+
+    margin-bottom: 13px;
+
+    text-align: center;
+
+    color: #aaa;
+}
+
+
+.category-product-container  .price-cart-container .add-cart-button
+{
+    font-size: 14px;
+
+    padding: 5px 7px;
+
+    text-align: center;
+    text-transform: capitalize;
+}
+.category-product-container  .price-cart-container .fa-shopping-cart
+{
+    margin-right: 10px;
+}
+
+/*=== sort by price arrow ===*/
+.sort-products
+{
+    position: relative;
+
+    margin-bottom: 54px;
+    cursor: pointer;
+}
+
+.sort-products > span
+{
+    position: absolute;
+}
+
+.sort-products > span:first-child
+{
+    font-size: 16px;
+
+    right: 65px;
+}
+
+.sort-products > .arrow
+{
+    font-size: 15px;
+
+    right: 33px;
+}

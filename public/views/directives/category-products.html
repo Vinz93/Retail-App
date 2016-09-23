@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="sort-products" ng-click="sortByPrice()">
+      <span>Sort by Price</span>
+      <span class="arrow" ng-show = "price == - 1 || price == null">
+        <i class="fa fa-arrow-down"></i>
+      </span>
+      <span class="arrow" ng-show = "price == 1">
+        <i class="fa fa-arrow-up"></i>
+      </span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="category-product-container col-sm-4" ng-repeat=" product in products">
+      <div class="product">
+        <img ng-src="{{product.photos[0]}}" alt="">
+        <h3 class="category-product-name"><a ng-href="#/product/{{product._id}}">{{product.name}}</a></h3>
+        <div class="price-cart-container">
+          <span class="product-price">$ {{product.price.amount}}</span>
+          <span class="add-cart-button"><i class="fa fa-shopping-cart"></i>add</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

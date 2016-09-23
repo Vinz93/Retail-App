@@ -1,0 +1,15 @@
+<div class="container-fluid category-bread-crumb">
+  <ul class="bread">
+    <!-- List of category ancestors -->
+    <li class="bread-item" ng-repeat="item in category.ancestors">
+      <span>/</span><a href="#/category/{{item}}">{{item}}</a>
+    </li>
+    <!-- sub categories menu -->
+    <span ng-show="children && children.length">
+      /<i class="fa fa-chevron-down" ng-click="showChildren()" ng-show="children && children.length"></i>
+    </span>
+    <ul class="children-menu" ng-show="display">
+      <li ng-repeat="child in children"><a ng-href="#/category/{{child._id}}">{{child._id}}</a></li>
+    </ul>
+  </ul>
+</div>

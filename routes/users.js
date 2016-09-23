@@ -8,7 +8,7 @@ router.use(bodyParser.json());
 router.route('/me/cart')
   .put(function (req , res) {
     try{
-      var cart = req.body.data.cart;
+      var cart = req.body.cart;
     }catch(e){
       res.status(400).json({error: "cart no especified"});
       return res;

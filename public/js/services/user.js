@@ -10,7 +10,7 @@ app.factory('User', function ($http) {
   }
 
   function cart(cart) {
-    return $http.put('/users/me/cart');
+    return $http.put('/users/me/cart', { cart: cart });
   }
 
 });

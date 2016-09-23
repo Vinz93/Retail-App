@@ -181,7 +181,9 @@ img
 
 .add-cart-button
 {
-    padding: 10px 20px;
+    font-size: 20px;
+
+    padding: 4px 20px;
 
     cursor: pointer;
     text-align: center;
@@ -300,6 +302,7 @@ img
     position: relative;
 
     margin-bottom: 54px;
+
     cursor: pointer;
 }
 

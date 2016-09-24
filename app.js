@@ -10,8 +10,8 @@ var app = express();
 //==== bd connection and passport config =====
 var connection = require('./config/db');
 require('./config/passportAuth')(passport);
-// ======= logger middleware (morgan)======
-app.use(morgan(':method :url :response-time'));
+
+app.use(morgan('dev'));
 // ====== passport configuration ========
 app.use(require('express-session')({secret: "my Secret key"}));
 app.use(passport.initialize());

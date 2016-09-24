@@ -1,4 +1,17 @@
 <div class="container checkout">
+  <div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-4">
+      <h4 class="text-center">Product</h4>
+    </div>
+    <div class="col-sm-2">
+      <h4 class="text-center">Price</h4>
+    </div>
+    <div class="col-sm-2">
+      <h4 class="text-center">Quantity</h4>
+    </div>
+  </div>
   <div class="cart-product row" ng-repeat = " item in user.data.cart">
     <div class="col-sm-3">
       <img ng-src="{{ item.product.photos[0]}}" alt="">
@@ -7,7 +20,10 @@
       <h4 class="product-name">{{ item.product.name }}</h4>
     </div>
     <div class="col-sm-2">
-      <p>{{item.product.displayPrice}}</p>
+      <p class="text-center">{{item.product.displayPrice}}</p>
+    </div>
+    <div class="col-sm-2">
+      <p class="text-center">{{item.quantity}}</p>
     </div>
   </div>
 </div>

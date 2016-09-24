@@ -13,6 +13,8 @@ router.route('/me/cart')
       res.status(400).json({error: "cart no especified"});
       return res;
     }
+    if(!req.user)
+      res.status(401).end();
     req.user.data.cart = cart;
     req.user.save(function (err, user) {
       if(err){

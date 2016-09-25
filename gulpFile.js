@@ -3,8 +3,8 @@ var browserSync = require('browser-sync').create();
 var nodemon = require('gulp-nodemon');
 
 var paths = {
-  js: ["routes/**/*.js",
-      "models/**/*.js"]
+  js: ["routes/*.js",
+      "models/*.js"]
 }
 
 /* ======== Watch files & reloads the server ========  */

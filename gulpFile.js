@@ -26,9 +26,13 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('nodemon', function () {
-  nodemon({ script: 'bin/www', ext: 'html js'})
-    .on('restart', function () {
-      console.log('server restarted!')
-    })
+  nodemon({
+       script: 'bin/www',
+        ext: 'html js',
+        watch: [paths.js],
+      })
+        .on('restart', function () {
+          console.log('server restarted!')
+        })
 })
 gulp.task('default',['watch']);

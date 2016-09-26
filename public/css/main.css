@@ -341,4 +341,14 @@ img
 
 .checkout > .cart-product > img{
   width: 100px;
+  height: auto;
+}
+
+.subtotal_container{
+  border-top: 1px solid #adadad;;
+  padding: 6px;
+}
+.subtotal_container .subtotal_amount{
+  color: #d24646;
+  font-family: 'Merriweather', serif;
 }

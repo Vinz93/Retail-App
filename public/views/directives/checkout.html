@@ -17,13 +17,26 @@
       <img ng-src="{{ item.product.photos[0]}}" alt="">
     </div>
     <div class="col-sm-4">
-      <h4 class="product-name">{{ item.product.name }}</h4>
+      <h4 class="product-name">{{::item.product.name }}</h4>
     </div>
     <div class="col-sm-2">
-      <p class="text-center">{{item.product.displayPrice}}</p>
+      <p class="text-center">{{::item.product.displayPrice}}</p>
     </div>
     <div class="col-sm-2">
-      <input type="number" name="name" ng-model="item.quantity">
+      <select
+        class="form-control" name="quantity"
+        ng-change="update()"
+        ng-options="i as i for i in [1,2,3,4,5]"
+        ng-model="item.quantity">
+          <option value="item.quantity" >{{item.quantity}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="row subtotal_container">
+    <div class="col-sm-4 col-sm-offset-7">
+      <h4 class="text-center">Subtotal:
+        <span class="subtotal_amount">$ {{subTotal}}</span>
+      </h4>
     </div>
   </div>
 </div>

@@ -1,28 +1,30 @@
 app.controller('addToCartCtrl',function ($scope, User) {
   var cart = undefined;
   var newItem = undefined;
+  var me = undefined;
   $scope.success = false;
-  var me = $scope.user
 
   $scope.addToCart = function (product){
-    var newItem = true;
+     User.getInfo()
+          .then(function(res) {
+              $scope.user = res.data;
+          });
+
+    newItem = true;
     var obj = { product: product._id, quantity: 1};
 
-    if(!me){
+    if(!$scope.user){
       alert("you must be logged");
       return false;
     }
-    cart = me.data.cart.map(function (i) {
-      console.log(i.product._id,' ',obj.product);
-      console.log(i.product._id === obj.product);
-      if(i.product._id === obj.product){
+    cart = $scope.user.data.cart.map(function (i) {
+      console.log(i.product," ",obj.product);
+      if(i.product === obj.product){
         i.quantity++;
         newItem = false;
-        console.log('is new ? ', newItem)
       }
       return  i;
     });
-    console.log('is new ? ', newItem);
     if(newItem)
       cart.push(obj);
 
@@ -31,7 +33,7 @@ app.controller('addToCartCtrl',function ($scope, User) {
         $scope.success = true;
         $scope.user = user.data;
         me = user.data;
-        console.log(user.data.data)
+        console.log("updated cart",me.data.cart);
       })
       .catch(function (err) {
         $scope.success = false;
